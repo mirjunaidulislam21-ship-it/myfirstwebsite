@@ -1,22 +1,7 @@
 function showMessage() {
-    alert("Hello Junaid! 🚀 Keep learning AWS and DevOps!");
-}
 
+    const message =
+        "Hello! 👋 Thanks for your interest in learning AWS with Junaid.";
 
-function toggleTheme() {
-
-    document.body.classList.toggle("dark");
-
-    const button =
-        document.querySelector(".theme-btn");
-
-    if (document.body.classList.contains("dark")) {
-
-        button.innerHTML = "☀️";
-
-    } else {
-
-        button.innerHTML = "🌙";
-
-    }
+    alert(message);
 }
