@@ -1,32 +1,35 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-          content="AWS DevOps Academy Kashmir - Learn AWS, Linux, Git, GitHub and DevOps through practical training.">
-
-    <meta name="theme-color"
-          content="#0f172a">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>AWS DevOps Academy Kashmir</title>
 
+    <meta name="description"
+          content="Learn AWS, Linux, Git, GitHub and DevOps from zero with practical training in Kashmir.">
 
-    <!-- =====================================================
-         GOOGLE ANALYTICS
-         ===================================================== -->
-
-    <script async
-        src="https://www.googletagmanager.com/gtag/js?id=G-9E02N9K5ST">
-    </script>
-
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9E02N9K5ST"></script>
     <script>
-
         window.dataLayer = window.dataLayer || [];
 
         function gtag() {
@@ -34,651 +37,623 @@
         }
 
         gtag('js', new Date());
-
         gtag('config', 'G-9E02N9K5ST');
-
     </script>
 
-
-    <!-- =====================================================
-         BASIC APPLICATION STYLES
-         ===================================================== -->
-
-    <style>
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            background: #f8fafc;
-            color: #0f172a;
-
-            line-height: 1.6;
-        }
-
-        a {
-            color: inherit;
-        }
-
-        .container {
-            width: min(1150px, 92%);
-            margin: auto;
-        }
-
-
-        /* =================================================
-           NAVBAR
-           ================================================= */
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-
-            background: rgba(255,255,255,0.95);
-
-            border-bottom:
-                1px solid #e2e8f0;
-
-            backdrop-filter: blur(10px);
-        }
-
-        .navbar {
-            min-height: 70px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            gap: 20px;
-        }
-
-        .logo {
-            text-decoration: none;
-
-            font-size: 20px;
-            font-weight: 800;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 22px;
-
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .nav-links a:hover {
-            opacity: 0.65;
-        }
-
-
-        /* =================================================
-           BUTTONS
-           ================================================= */
-
-        .button {
-            display: inline-flex;
-
-            align-items: center;
-            justify-content: center;
-
-            gap: 8px;
-
-            padding: 13px 20px;
-
-            border-radius: 10px;
-
-            text-decoration: none;
-
-            font-weight: 700;
-
-            border: none;
-
-            cursor: pointer;
-
-            transition:
-                transform .2s ease,
-                opacity .2s ease;
-        }
-
-        .button:hover {
-            transform: translateY(-2px);
-            opacity: .9;
-        }
-
-        .primary {
-            background: #2563eb;
-            color: white;
-        }
-
-        .secondary {
-            background: #e2e8f0;
-            color: #0f172a;
-        }
-
-        .whatsapp {
-            background: #25d366;
-            color: white;
-        }
-
-
-        /* =================================================
-           HERO
-           ================================================= */
-
-        .hero {
-            padding: 100px 0 80px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #eff6ff,
-                    #f8fafc
-                );
-        }
-
-        .hero-grid {
-            display: grid;
-
-            grid-template-columns:
-                1.3fr
-                0.7fr;
-
-            gap: 50px;
-
-            align-items: center;
-        }
-
-        .badge {
-            display: inline-block;
-
-            padding: 7px 12px;
-
-            border-radius: 999px;
-
-            background: #dbeafe;
-            color: #1d4ed8;
-
-            font-size: 14px;
-            font-weight: 700;
-
-            margin-bottom: 18px;
-        }
-
-        .hero h1 {
-            font-size:
-                clamp(42px, 6vw, 72px);
-
-            line-height: 1.05;
-
-            margin-bottom: 22px;
-        }
-
-        .hero h1 span {
-            color: #2563eb;
-        }
-
-        .hero p {
-            max-width: 700px;
-
-            font-size: 19px;
-
-            color: #475569;
-
-            margin-bottom: 30px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-
-        /* =================================================
-           TERMINAL CARD
-           ================================================= */
-
-        .terminal {
-            background: #020617;
-            color: #e2e8f0;
-
-            border-radius: 16px;
-
-            padding: 24px;
-
-            box-shadow:
-                0 25px 60px
-                rgba(15,23,42,.25);
-
-            font-family:
-                monospace;
-        }
-
-        .terminal-title {
-            color: #94a3b8;
-            margin-bottom: 20px;
-        }
-
-        .terminal-line {
-            margin: 10px 0;
-        }
-
-        .terminal-command {
-            color: #22c55e;
-        }
-
-
-        /* =================================================
-           SECTIONS
-           ================================================= */
-
-        section {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-
-            margin-bottom: 45px;
-        }
-
-        .section-title h2 {
-            font-size: 38px;
-            margin-bottom: 10px;
-        }
-
-        .section-title p {
-            color: #64748b;
-        }
-
-
-        /* =================================================
-           STATS
-           ================================================= */
-
-        .stats {
-            display: grid;
-
-            grid-template-columns:
-                repeat(4, 1fr);
-
-            gap: 18px;
-        }
-
-        .stat {
-            background: white;
-
-            padding: 28px;
-
-            text-align: center;
-
-            border-radius: 14px;
-
-            border:
-                1px solid #e2e8f0;
-        }
-
-        .stat strong {
-            display: block;
-
-            font-size: 30px;
-
-            margin-bottom: 5px;
-
-            color: #2563eb;
-        }
-
-        .stat span {
-            color: #64748b;
-        }
-
-
-        /* =================================================
-           COURSES
-           ================================================= */
-
-        .courses {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 24px;
-        }
-
-        .course {
-            background: white;
-
-            border:
-                1px solid #e2e8f0;
-
-            border-radius: 16px;
-
-            padding: 28px;
-
-            transition:
-                transform .2s ease,
-                box-shadow .2s ease;
-        }
-
-        .course:hover {
-            transform: translateY(-5px);
-
-            box-shadow:
-                0 15px 35px
-                rgba(15,23,42,.10);
-        }
-
-        .course-icon {
-            font-size: 38px;
-
-            margin-bottom: 15px;
-        }
-
-        .course h3 {
-            font-size: 24px;
-
-            margin-bottom: 10px;
-        }
-
-        .course p {
-            color: #64748b;
-
-            margin-bottom: 20px;
-        }
-
-        .price {
-            font-size: 24px;
-
-            font-weight: 800;
-
-            margin-bottom: 18px;
-        }
-
-
-        /* =================================================
-           FEATURES
-           ================================================= */
-
-        .features {
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 24px;
-        }
-
-        .feature {
-            background: white;
-
-            border:
-                1px solid #e2e8f0;
-
-            padding: 28px;
-
-            border-radius: 16px;
-        }
-
-        .feature-icon {
-            font-size: 34px;
-
-            margin-bottom: 12px;
-        }
-
-        .feature h3 {
-            margin-bottom: 8px;
-        }
-
-        .feature p {
-            color: #64748b;
-        }
-
-
-        /* =================================================
-           NOTES
-           ================================================= */
-
-        .notes {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 20px;
-        }
-
-        .note {
-            background: white;
-
-            border:
-                1px solid #e2e8f0;
-
-            padding: 25px;
-
-            border-radius: 14px;
-        }
-
-        .note h3 {
-            margin-bottom: 8px;
-        }
-
-        .note p {
-            color: #64748b;
-
-            margin-bottom: 18px;
-        }
-
-
-        /* =================================================
-           CONTACT
-           ================================================= */
-
-        .contact {
-            background: #0f172a;
-
-            color: white;
-
-            border-radius: 24px;
-
-            padding: 55px;
-
-            text-align: center;
-        }
-
-        .contact h2 {
-            font-size: 38px;
-
-            margin-bottom: 12px;
-        }
-
-        .contact p {
-            color: #cbd5e1;
-
-            margin-bottom: 25px;
-        }
-
-        .contact-buttons {
-            display: flex;
-
-            justify-content: center;
-
-            flex-wrap: wrap;
-
-            gap: 12px;
-        }
-
-
-        /* =================================================
-           FOOTER
-           ================================================= */
-
-        footer {
-            padding: 35px 0;
-
-            text-align: center;
-
-            color: #64748b;
-        }
-
-
-        /* =================================================
-           MOBILE
-           ================================================= */
-
-        @media (max-width: 850px) {
-
-            .nav-links {
-                display: none;
-            }
-
-            .hero-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .stats {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-            .courses,
-            .features,
-            .notes {
-                grid-template-columns: 1fr;
-            }
-
-            .contact {
-                padding: 35px 20px;
-            }
-
-        }
-
-        @media (max-width: 500px) {
-
-            .hero {
-                padding: 70px 0;
-            }
-
-            .hero h1 {
-                font-size: 42px;
-            }
-
-            .stats {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-buttons,
-            .contact-buttons {
-                flex-direction: column;
-            }
-
-            .button {
-                width: 100%;
-            }
-
-        }
-
-    </style>
-
+    <!-- Website CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
+<!-- =========================
+     NAVIGATION
+========================= -->
 
-    <!-- =====================================================
-         NAVIGATION
-         ===================================================== -->
+<header class="navbar">
 
-    <header>
+    <div class="container nav-container">
 
-        <div class="container navbar">
+        <a href="#home" class="logo">
+            ☁️ AWS DevOps Academy Kashmir
+        </a>
 
-            <a href="#home"
-               class="logo">
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#courses">Courses</a>
+            <a href="#learning">Learning</a>
+            <a href="#notes">Notes</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-                ☁️ AWS DevOps Academy Kashmir
+        <button id="themeButton" class="theme-button">
+            ☀️
+        </button>
 
-            </a>
+    </div>
 
-            <nav class="nav-links">
+</header>
 
-                <a href="#home">Home</a>
 
-                <a href="#courses">Courses</a>
+<!-- =========================
+     HERO
+========================= -->
 
-                <a href="#learning">Learning</a>
+<section id="home" class="hero">
 
-                <a href="#notes">Notes</a>
+    <div class="container hero-grid">
 
-                <a href="#contact">Contact</a>
+        <div class="hero-content">
 
-            </nav>
+            <div class="location">
+                📍 Srinagar, Jammu & Kashmir
+            </div>
+
+            <h1>
+                Learn AWS & DevOps
+                <span>From Zero.</span>
+            </h1>
+
+            <p class="hero-text">
+                Practical training in AWS, Linux, Git, GitHub and DevOps.
+                Learn step by step, build real projects and develop
+                practical cloud skills.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#courses" class="button primary">
+                    Explore Courses
+                </a>
+
+                <a href="#contact" class="button secondary">
+                    Contact Academy
+                </a>
+
+            </div>
 
         </div>
 
-    </header>
+
+        <!-- PROFILE CARD -->
+
+        <div class="profile-card">
+
+            <div class="profile-image-wrapper">
+
+                <img
+                    src="assets/junaid.jpg"
+                    alt="Junaid - AWS DevOps Academy Kashmir"
+                    class="profile-image"
+                >
+
+            </div>
+
+            <h2>Junaid</h2>
+
+            <p>
+                AWS & DevOps Learning
+            </p>
+
+            <div class="profile-status">
+                ● Learning & Building
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
-    <!-- =====================================================
-         HERO
-         ===================================================== -->
+<!-- =========================
+     TERMINAL
+========================= -->
 
-    <main>
+<section class="terminal-section">
 
-        <section id="home"
-                 class="hero">
+    <div class="container">
 
-            <div class="container hero-grid">
+        <div class="terminal">
 
-                <div>
+            <div class="terminal-top">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
-                    <span class="badge">
-                        📍 Srinagar, Jammu & Kashmir
-                    </span>
+            <div class="terminal-body">
 
-                    <h1>
-                        Learn AWS &
-                        <span>DevOps</span>
-                        From Zero.
-                    </h1>
+                <p>
+                    <span class="terminal-green">$</span>
+                    whoami
+                </p>
 
-                    <p>
-                        Practical training in AWS, Linux,
-                        Git, GitHub and DevOps.
-                        Learn step by step, build real
-                        projects and develop practical
-                        cloud skills.
-                    </p>
+                <p class="terminal-output">
+                    junaid
+                </p>
 
-                    <div class="hero-buttons">
+                <p>
+                    <span class="terminal-green">$</span>
+                    learning --now
+                </p>
 
-                        <a href="#courses"
-                           class="button primary">
-                            Explore Courses
+                <p class="terminal-output">
+                    AWS + Linux + Git + DevOps
+                </p>
+
+                <p>
+                    <span class="terminal-green">$</span>
+                    status
+                </p>
+
+                <p class="terminal-output">
+                    ● Learning & Building
+                </p>
+
+                <p>
+                    <span class="terminal-green">$</span>
+                    location
+                </p>
+
+                <p class="terminal-output">
+                    Srinagar, J&K
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     STATS
+========================= -->
+
+<section class="stats">
+
+    <div class="container stats-grid">
+
+        <div class="stat-card">
+            <strong>4+</strong>
+            <span>Courses</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>24/7</strong>
+            <span>Learning Resources</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>100%</strong>
+            <span>Practical Focus</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>1:1</strong>
+            <span>Guidance</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     COURSES
+========================= -->
+
+<section id="courses" class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                COURSES
+            </span>
+
+            <h2>Our Courses</h2>
+
+            <p>
+                Start from the fundamentals and progress toward
+                practical cloud and DevOps skills.
+            </p>
+
+        </div>
+
+
+        <div class="course-grid">
+
+
+            <!-- AWS -->
+
+            <article class="course-card">
+
+                <div class="course-icon">
+                    ☁️
+                </div>
+
+                <span class="course-tag">
+                    BEGINNER
+                </span>
+
+                <h3>AWS Fundamentals</h3>
+
+                <p>
+                    Learn cloud fundamentals, EC2, S3, IAM,
+                    networking and practical AWS deployment.
+                </p>
+
+                <div class="course-bottom">
+
+                    <strong>₹1,999</strong>
+
+                    <a
+                        href="https://wa.me/919622821316?text=Hello%20I%20am%20interested%20in%20AWS%20Fundamentals"
+                        target="_blank"
+                        class="course-button">
+                        Enquire
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- DEVOPS -->
+
+            <article class="course-card popular">
+
+                <div class="popular-label">
+                    POPULAR
+                </div>
+
+                <div class="course-icon">
+                    🚀
+                </div>
+
+                <span class="course-tag">
+                    PRACTICAL
+                </span>
+
+                <h3>DevOps</h3>
+
+                <p>
+                    Learn Git, CI/CD, Docker, automation,
+                    cloud deployment and DevOps practices.
+                </p>
+
+                <div class="course-bottom">
+
+                    <strong>₹2,999</strong>
+
+                    <a
+                        href="https://wa.me/919622821316?text=Hello%20I%20am%20interested%20in%20DevOps"
+                        target="_blank"
+                        class="course-button">
+                        Enquire
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- LINUX -->
+
+            <article class="course-card">
+
+                <div class="course-icon">
+                    🐧
+                </div>
+
+                <span class="course-tag">
+                    BEGINNER
+                </span>
+
+                <h3>Linux</h3>
+
+                <p>
+                    Learn Ubuntu, terminal commands, file management,
+                    permissions, processes and servers.
+                </p>
+
+                <div class="course-bottom">
+
+                    <strong>₹1,999</strong>
+
+                    <a
+                        href="https://wa.me/919622821316?text=Hello%20I%20am%20interested%20in%20Linux"
+                        target="_blank"
+                        class="course-button">
+                        Enquire
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- GIT -->
+
+            <article class="course-card">
+
+                <div class="course-icon">
+                    🔧
+                </div>
+
+                <span class="course-tag">
+                    BEGINNER
+                </span>
+
+                <h3>Git & GitHub</h3>
+
+                <p>
+                    Learn repositories, commits, branches, SSH,
+                    pull requests and GitHub workflows.
+                </p>
+
+                <div class="course-bottom">
+
+                    <strong>₹1,999</strong>
+
+                    <a
+                        href="https://wa.me/919622821316?text=Hello%20I%20am%20interested%20in%20Git%20and%20GitHub"
+                        target="_blank"
+                        class="course-button">
+                        Enquire
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LEARNING
+========================= -->
+
+<section id="learning" class="section section-dark">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                LEARNING
+            </span>
+
+            <h2>Learn By Building</h2>
+
+            <p>
+                The goal is not only to watch lessons.
+                Build projects and learn how real systems work.
+            </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    💻
+                </div>
+
+                <h3>Practical Projects</h3>
+
+                <p>
+                    Build websites, deploy applications, work with
+                    Linux servers and practice cloud infrastructure.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    📚
+                </div>
+
+                <h3>Study Material</h3>
+
+                <p>
+                    Access beginner-friendly notes, command references,
+                    learning guides and useful resources.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    👨‍🏫
+                </div>
+
+                <h3>Personal Guidance</h3>
+
+                <p>
+                    Get help understanding concepts, solving problems
+                    and progressing through practical exercises.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     NOTES
+========================= -->
+
+<section id="notes" class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                FREE RESOURCES
+            </span>
+
+            <h2>Free Learning Notes</h2>
+
+            <p>
+                Click a subject to open beginner notes.
+            </p>
+
+        </div>
+
+
+        <div class="notes-grid">
+
+
+            <a href="notes/aws.html" class="note-card">
+
+                <div class="note-icon">
+                    ☁️
+                </div>
+
+                <h3>AWS Notes</h3>
+
+                <p>
+                    AWS services and cloud fundamentals.
+                </p>
+
+                <span>
+                    Open Notes →
+                </span>
+
+            </a>
+
+
+            <a href="notes/linux.html" class="note-card">
+
+                <div class="note-icon">
+                    🐧
+                </div>
+
+                <h3>Linux Notes</h3>
+
+                <p>
+                    Essential Linux commands.
+                </p>
+
+                <span>
+                    Open Notes →
+                </span>
+
+            </a>
+
+
+            <a href="notes/git.html" class="note-card">
+
+                <div class="note-icon">
+                    🔧
+                </div>
+
+                <h3>Git Notes</h3>
+
+                <p>
+                    Git and GitHub fundamentals.
+                </p>
+
+                <span>
+                    Open Notes →
+                </span>
+
+            </a>
+
+
+            <a href="notes/devops.html" class="note-card">
+
+                <div class="note-icon">
+                    🚀
+                </div>
+
+                <h3>DevOps Notes</h3>
+
+                <p>
+                    DevOps concepts and roadmap.
+                </p>
+
+                <span>
+                    Open Notes →
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="contact-section">
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    CONTACT
+                </span>
+
+                <h2>
+                    Join AWS DevOps Academy Kashmir
+                </h2>
+
+                <p>
+                    Interested in learning AWS, Linux, Git,
+                    GitHub or DevOps?
+                </p>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        📞
+                    </div>
+
+                    <div>
+
+                        <strong>Phone</strong>
+
+                        <a href="tel:+919622821316">
+                            +91 9622821316
                         </a>
 
-                        <a href="#contact"
-                           class="button secondary">
-                            Contact Academy
+                        <a href="tel:+918899867901">
+                            +91 8899867901
                         </a>
 
                     </div>
@@ -686,538 +661,153 @@
                 </div>
 
 
-                <div class="terminal">
+                <div class="contact-item">
 
-                    <div class="terminal-title">
-                        AWS DevOps Academy
+                    <div class="contact-icon">
+                        📧
                     </div>
 
-                    <div class="terminal-line">
-                        $ whoami
+                    <div>
+
+                        <strong>Email</strong>
+
+                        <a href="mailto:mirjunaidulislam21@gmail.com">
+                            mirjunaidulislam21@gmail.com
+                        </a>
+
                     </div>
 
-                    <div class="terminal-line terminal-command">
-                        junaid
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        📍
                     </div>
 
-                    <div class="terminal-line">
-                        $ learning --now
+                    <div>
+
+                        <strong>Location</strong>
+
+                        <span>
+                            Srinagar, Jammu & Kashmir
+                        </span>
+
                     </div>
 
-                    <div class="terminal-line terminal-command">
-                        AWS + Linux + Git + DevOps
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        🎓
                     </div>
 
-                    <div class="terminal-line">
-                        $ status
-                    </div>
+                    <div>
 
-                    <div class="terminal-line terminal-command">
-                        ● Learning & Building
-                    </div>
+                        <strong>Training</strong>
 
-                    <div class="terminal-line">
-                        $ location
-                    </div>
+                        <span>
+                            AWS · Linux · Git · GitHub · DevOps
+                        </span>
 
-                    <div class="terminal-line terminal-command">
-                        Srinagar, J&K
                     </div>
 
                 </div>
 
             </div>
 
-        </section>
 
+            <div class="contact-buttons">
 
-        <!-- =================================================
-             STATS
-             ================================================= -->
+                <a
+                    href="tel:+919622821316"
+                    class="button primary">
+                    📞 Call Now
+                </a>
 
-        <section>
+                <a
+                    href="mailto:mirjunaidulislam21@gmail.com"
+                    class="button secondary">
+                    📧 Email Me
+                </a>
 
-            <div class="container">
-
-                <div class="stats">
-
-                    <div class="stat">
-                        <strong>4+</strong>
-                        <span>Courses</span>
-                    </div>
-
-                    <div class="stat">
-                        <strong>24/7</strong>
-                        <span>Learning Resources</span>
-                    </div>
-
-                    <div class="stat">
-                        <strong>100%</strong>
-                        <span>Practical Focus</span>
-                    </div>
-
-                    <div class="stat">
-                        <strong>1:1</strong>
-                        <span>Guidance</span>
-                    </div>
-
-                </div>
+                <a
+                    href="https://wa.me/919622821316?text=Hello%20AWS%20DevOps%20Academy%20Kashmir"
+                    target="_blank"
+                    class="button whatsapp">
+                    💬 WhatsApp
+                </a>
 
             </div>
 
-        </section>
+        </div>
 
+    </div>
 
-        <!-- =================================================
-             COURSES
-             ================================================= -->
+</section>
 
-        <section id="courses">
 
-            <div class="container">
+<!-- =========================
+     FOOTER
+========================= -->
 
-                <div class="section-title">
+<footer>
 
-                    <h2>
-                        Our Courses
-                    </h2>
+    <div class="container footer-content">
 
-                    <p>
-                        Start from the fundamentals
-                        and progress toward practical
-                        cloud and DevOps skills.
-                    </p>
+        <div>
 
-                </div>
-
-
-                <div class="courses">
-
-
-                    <article class="course">
-
-                        <div class="course-icon">
-                            ☁️
-                        </div>
-
-                        <h3>
-                            AWS Fundamentals
-                        </h3>
-
-                        <p>
-                            Learn cloud fundamentals,
-                            EC2, S3, IAM, networking
-                            and practical AWS deployment.
-                        </p>
-
-                        <div class="price">
-                            ₹1,999
-                        </div>
-
-                        <a href="#contact"
-                           class="button primary">
-                            View Course
-                        </a>
-
-                    </article>
-
-
-                    <article class="course">
-
-                        <div class="course-icon">
-                            🚀
-                        </div>
-
-                        <h3>
-                            DevOps
-                        </h3>
-
-                        <p>
-                            Learn Git, CI/CD, Docker,
-                            automation, cloud deployment
-                            and DevOps practices.
-                        </p>
-
-                        <div class="price">
-                            ₹2,999
-                        </div>
-
-                        <a href="#contact"
-                           class="button primary">
-                            View Course
-                        </a>
-
-                    </article>
-
-
-                    <article class="course">
-
-                        <div class="course-icon">
-                            🐧
-                        </div>
-
-                        <h3>
-                            Linux
-                        </h3>
-
-                        <p>
-                            Learn Ubuntu, terminal commands,
-                            file management, permissions,
-                            processes and servers.
-                        </p>
-
-                        <div class="price">
-                            ₹1,999
-                        </div>
-
-                        <a href="#contact"
-                           class="button primary">
-                            View Course
-                        </a>
-
-                    </article>
-
-
-                    <article class="course">
-
-                        <div class="course-icon">
-                            🔧
-                        </div>
-
-                        <h3>
-                            Git & GitHub
-                        </h3>
-
-                        <p>
-                            Learn repositories, commits,
-                            branches, SSH, pull requests
-                            and GitHub workflows.
-                        </p>
-
-                        <div class="price">
-                            ₹1,999
-                        </div>
-
-                        <a href="#contact"
-                           class="button primary">
-                            View Course
-                        </a>
-
-                    </article>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             LEARNING
-             ================================================= -->
-
-        <section id="learning">
-
-            <div class="container">
-
-                <div class="section-title">
-
-                    <h2>
-                        Learn By Building
-                    </h2>
-
-                    <p>
-                        The goal is not only to watch
-                        lessons. Build projects and learn
-                        how real systems work.
-                    </p>
-
-                </div>
-
-
-                <div class="features">
-
-
-                    <div class="feature">
-
-                        <div class="feature-icon">
-                            💻
-                        </div>
-
-                        <h3>
-                            Practical Projects
-                        </h3>
-
-                        <p>
-                            Build websites, deploy
-                            applications, work with Linux
-                            servers and practice cloud
-                            infrastructure.
-                        </p>
-
-                    </div>
-
-
-                    <div class="feature">
-
-                        <div class="feature-icon">
-                            📚
-                        </div>
-
-                        <h3>
-                            Study Material
-                        </h3>
-
-                        <p>
-                            Access beginner-friendly notes,
-                            command references, learning
-                            guides and useful resources.
-                        </p>
-
-                    </div>
-
-
-                    <div class="feature">
-
-                        <div class="feature-icon">
-                            👨‍🏫
-                        </div>
-
-                        <h3>
-                            Personal Guidance
-                        </h3>
-
-                        <p>
-                            Get help understanding concepts,
-                            solving problems and progressing
-                            through practical exercises.
-                        </p>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             NOTES
-             ================================================= -->
-
-        <section id="notes">
-
-            <div class="container">
-
-                <div class="section-title">
-
-                    <h2>
-                        Free Learning Notes
-                    </h2>
-
-                    <p>
-                        Beginner-friendly resources
-                        for your cloud and DevOps journey.
-                    </p>
-
-                </div>
-
-
-                <div class="notes">
-
-
-                    <article class="note">
-
-                        <h3>
-                            ☁️ AWS Notes
-                        </h3>
-
-                        <p>
-                            AWS services and cloud
-                            fundamentals.
-                        </p>
-
-                        <a href="documents/aws-notes.pdf"
-                           class="button secondary">
-                            Open Notes
-                        </a>
-
-                    </article>
-
-
-                    <article class="note">
-
-                        <h3>
-                            🐧 Linux Notes
-                        </h3>
-
-                        <p>
-                            Essential Linux commands.
-                        </p>
-
-                        <a href="documents/linux-notes.pdf"
-                           class="button secondary">
-                            Open Notes
-                        </a>
-
-                    </article>
-
-
-                    <article class="note">
-
-                        <h3>
-                            🔧 Git Notes
-                        </h3>
-
-                        <p>
-                            Git and GitHub fundamentals.
-                        </p>
-
-                        <a href="documents/git-notes.pdf"
-                           class="button secondary">
-                            Open Notes
-                        </a>
-
-                    </article>
-
-
-                    <article class="note">
-
-                        <h3>
-                            🚀 DevOps Notes
-                        </h3>
-
-                        <p>
-                            DevOps concepts and roadmap.
-                        </p>
-
-                        <a href="documents/devops-notes.pdf"
-                           class="button secondary">
-                            Open Notes
-                        </a>
-
-                    </article>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             CONTACT
-             ================================================= -->
-
-        <section id="contact">
-
-            <div class="container">
-
-                <div class="contact">
-
-                    <h2>
-                        Join AWS DevOps Academy Kashmir
-                    </h2>
-
-                    <p>
-                        Interested in learning AWS,
-                        Linux, Git, GitHub or DevOps?
-                    </p>
-
-
-                    <div class="contact-buttons">
-
-
-                        <a
-                            href="tel:+919622821316"
-                            class="button primary">
-
-                            📞 Call Now
-
-                        </a>
-
-
-                        <a
-                            href="mailto:mirjunaidulislam21@gmail.com"
-                            class="button secondary">
-
-                            📧 Email Me
-
-                        </a>
-
-
-                        <a
-                            href="https://wa.me/919622821316?text=Hello%20Junaid%20Academy%2C%20I%20am%20interested%20in%20your%20AWS%20and%20DevOps%20courses."
-                            class="button whatsapp"
-                            target="_blank"
-                            rel="noopener noreferrer">
-
-                            💬 WhatsApp
-
-                        </a>
-
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- =====================================================
-         FOOTER
-         ===================================================== -->
-
-    <footer>
-
-        <div class="container">
-
-            <strong>
+            <h3>
                 ☁️ AWS DevOps Academy Kashmir
-            </strong>
+            </h3>
 
             <p>
                 Learn. Build. Deploy. Grow.
             </p>
 
+        </div>
+
+        <div>
+
             <p>
                 Srinagar, Jammu & Kashmir
             </p>
 
-            <small>
-                © <span id="currentYear"></span>
-                AWS DevOps Academy Kashmir.
+            <p>
+                © 2026 AWS DevOps Academy Kashmir.
                 All rights reserved.
-            </small>
+            </p>
 
         </div>
 
-    </footer>
+    </div>
+
+</footer>
 
 
-    <!-- =====================================================
-         APPLICATION JAVASCRIPT
-         ===================================================== -->
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
 
-    <script src="js/app.js"></script>
+<a
+    href="https://wa.me/919622821316?text=Hello%20AWS%20DevOps%20Academy%20Kashmir"
+    target="_blank"
+    class="whatsapp-float"
+    aria-label="Contact us on WhatsApp">
+
+    💬
+
+</a>
 
 
-    <script>
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
-        document.getElementById("currentYear")
-            .textContent = new Date().getFullYear();
-
-    </script>
-
+<script src="js/app.js"></script>
 
 </body>
-
 </html>
